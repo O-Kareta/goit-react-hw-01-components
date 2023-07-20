@@ -1,14 +1,16 @@
-import './FriendListItem.css';
-// import 'index.css';
+import css from './Friends.module.css';
 
-const FriendListItem = ({ avatar, name, isOnline }) => {
-    return (
-        <li class="friends-item">
-            <span class={`status ${isOnline ? 'online' : 'offline'}`}> </span>
-            <img class="avatar" src={avatar} alt="User avatar" width="48" />
-            <p class="name">{name}</p>
-        </li>
-    );
+export const FriendListItem = ({ avatar, name, isOnline }) => {
+  return (
+    <li className={css.friendsItem}>
+      <span
+        className={css.status}
+        style={{
+          backgroundColor: isOnline ? '#48ae4b' : 'tomato',
+        }}
+      ></span>
+      <img className="avatar" src={avatar} alt="User avatar" width="48" />
+      <p className="name">{name}</p>
+    </li>
+  );
 };
-
-export default FriendListItem
