@@ -1,10 +1,5 @@
 import css from './Statistics.module.css';
-
-export function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+import getRandomHexColor from '../../helpers/getRandomHexColor.js'
 
 export const Statistics = ({ title, stats }) => {
   return (
